@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-charcoal/95 border-b-4 border-road-yellow">
+    <nav className="fixed w-full z-50 bg-charcoal border-b-4 border-road-yellow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo - Changed 'to' to 'href' */}
