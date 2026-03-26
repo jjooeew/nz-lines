@@ -1,19 +1,20 @@
-"use client"; // Required for useState and animations
+"use client"; 
 
 import React from 'react';
-import Link from 'next/link'; // Changed from react-router-dom
-import { usePathname } from 'next/navigation'; // Changed from react-router-dom
+import Link from 'next/link'; 
+import { usePathname } from 'next/navigation'; 
 import { Phone, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { cn } from '@/lib/utils'; // Updated alias to match your new structure
+import { cn } from '@/lib/utils'; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
-  const pathname = usePathname(); // Replaces useLocation().pathname
+  const pathname = usePathname(); 
 
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services'},
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -21,8 +22,7 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 bg-charcoal border-b-4 border-road-yellow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          {/* Logo - Changed 'to' to 'href' */}
-          <Link href="/design-b" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <div className="bg-road-yellow p-1 skew-x-[-12deg]">
               <span className="text-charcoal font-black text-2xl px-2 block skew-x-[12deg]">LINEPRO</span>
             </div>

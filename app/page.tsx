@@ -43,22 +43,40 @@ export default function Home() {
 
   const services = [
     {
-      title: "ROAD MARKING",
+      title: "TRAFFIC MANAGEMENT",
       desc: "High-visibility thermal and cold-applied markings for highways and local roads.",
       icon: <Map className="w-12 h-12" />,
       img: "https://picsum.photos/seed/road1/800/600",
     },
     {
-      title: "CARPARK PAINTING",
+      title: "WATER BLASTING",
       desc: "Precision layout and painting for commercial and retail parking facilities.",
       icon: <CheckCircle2 className="w-12 h-12" />,
-      img: "https://picsum.photos/seed/carpark/800/600",
+      img: "/waterblasting.jpg",
     },
     {
-      title: "WAREHOUSE SAFETY",
+      title: "GRINDING",
       desc: "Internal safety walkways, forklift zones, and hazard markings.",
       icon: <Shield className="w-12 h-12" />,
-      img: "https://picsum.photos/seed/warehouse/800/600",
+      img: "/grinding.jpg",
+    },
+    {
+      title: "WHEEL STOPS",
+      desc: "Internal safety walkways, forklift zones, and hazard markings.",
+      icon: <Shield className="w-12 h-12" />,
+      img: "/wheelStop.jpg",
+    },
+    {
+      title: "SPEED HUMPS",
+      desc: "Internal safety walkways, forklift zones, and hazard markings.",
+      icon: <Shield className="w-12 h-12" />,
+      img: "/speed-bump.jpg",
+    },
+    {
+      title: "SIGNS",
+      desc: "Internal safety walkways, forklift zones, and hazard markings.",
+      icon: <Shield className="w-12 h-12" />,
+      img: "/road-sign2.jpg",
     },
   ];
 
@@ -70,7 +88,7 @@ export default function Home() {
         <section className="relative h-[90vh] flex items-center overflow-hidden bg-charcoal">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://picsum.photos/seed/roadwork/1920/1080?grayscale"
+              src="/auckland-skyline.jpg"
               className="w-full h-full object-cover opacity-40"
               alt="Road painting crew"
               referrerPolicy="no-referrer"
@@ -327,7 +345,10 @@ export default function Home() {
         </section>
 
         {/* Emergency Banner */}
-        <section ref={bannerRef} className="bg-road-yellow py-12 overflow-hidden">
+        <section
+          ref={bannerRef}
+          className="bg-road-yellow py-12 overflow-hidden"
+        >
           <motion.div
             animate={{ x: [0, -1000] }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}

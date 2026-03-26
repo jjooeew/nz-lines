@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { Shield, HardHat, Award, Zap, CheckCircle2 } from 'lucide-react';
+import Footer from '@/components/Footer';
 
 export default function About() {
   const equipment = [
@@ -76,13 +77,13 @@ export default function About() {
             </div>
             <div className="relative">
               <img
-                src="https://picsum.photos/seed/crew/800/1000"
-                className="rounded-lg shadow-2xl skew-x-[2deg]"
+                src="/road-sign.jpg"
+                className="rounded-lg shadow-2xl"
                 alt="Our crew"
               />
-              <div className="absolute -top-10 -left-10 bg-charcoal p-12 hidden lg:block">
+              {/* <div className="absolute -top-10 -left-10 bg-charcoal p-12 hidden lg:block">
                 <HardHat className="w-16 h-16 text-road-yellow" />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -132,6 +133,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
